@@ -566,30 +566,69 @@ body {
 	top:0; 
 	left:0; 
 }
-/* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
+/* Styling the area of the slides */
+#slideshow {
+    overflow: hidden;
+    height: 510px;
+    width: 728px;
+    margin: 0 auto;
+  }
+    
+  /* Style each of the sides 
+  with a fixed width and height */
+  .slide {
     float: left;
-    width: 33.33%;
-    padding: 5px;
+    height: 510px;
+    width: 728px;
   }
-  
-  /* Clear floats after image containers */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
+    
+  /* Add animation to the slides */
+  .slide-wrapper {
+    /* Calculate the total width on the
+    basis of number of slides */
+    width: calc(728px * 4);
+    
+    /* Specify the animation with the
+    duration and speed */
+    animation: slide 10s ease infinite;
   }
-  .row {
-    display: flex;
+    
+  /* Set the background color
+  of each of the slides */
+  .slide:nth-child(1) {
+    background: green;
   }
-  
-  .column {
-    flex: 33.33%;
-    padding: 5px;
+    
+  .slide:nth-child(2) {
+    background: pink;
   }
-  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 500px) {
-    .column {
-      width: 100%;
+    
+  .slide:nth-child(3) {
+    background: red;
+  }
+    
+  .slide:nth-child(4) {
+    background: yellow;
+  }
+    
+  /* Define the animation 
+  for the slideshow */
+  @keyframes slide {
+    /* Calculate the margin-left for 
+    each of the slides */
+    20% {
+      margin-left: 0px;
+    }
+    
+    40% {
+      margin-left: calc(-728px * 1);
+    }
+    
+    60% {
+      margin-left: calc(-728px * 2);
+    }
+    
+    80% {
+      margin-left: calc(-728px * 3);
     }
   }
