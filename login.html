@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="css/loginStyle.css">
+	
 </head>
 <body>
 	<div class="row gmailStyle">
@@ -24,7 +25,7 @@
 						</div>
 						<div class="clearfix mar-all pad-all"></div>
 
-						<img src="images/Googlelogo.png" class="logoImage" />
+						<img src="img/logo2.png" class="logoImage" />
 						<h5 class="center-align mar-top mar-bottom formTitle">Sign In</h5>
 						<p class="center-align pad-no mar-no">to continue to application</p>
 
@@ -109,5 +110,29 @@
 	<script type="text/javascript" src="js/cash.min.js"></script>
 	<script type="text/javascript" src="js/routie.min.js"></script>
 	<script type="text/javascript" src="js/loginScript.js"></script>
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCm3XhXvI02CJbOqVZ110OFSxZzdwsWZfs",
+    authDomain: "dsccloud-bb8fd.firebaseapp.com",
+    projectId: "dsccloud-bb8fd",
+    storageBucket: "dsccloud-bb8fd.appspot.com",
+    messagingSenderId: "490065074413",
+    appId: "1:490065074413:web:4a694c11ad3ef6d6bf14e4",
+    measurementId: "G-TYSHL8NQL8"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </body>
 </html>
